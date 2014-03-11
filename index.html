@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Banner Amigo</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="http://www.pat-burt.com/csspopup.js"></script>
+	<script>
+		window.onload=function(){
+			if(screen.width < 1000) {
+				window.location = "mobile/"
+			}
+		};
+	</script>
+</head>
+
+
+<div class="top_banner">
+	<div style="position: absolute; left: 5px;"><a href="index.html">Banner Amigo</a></div>
+	<div style="position: absolute; right: 10px;"><a href="how.html">How It Works</a></div>
+</div>
+
+<div class="centerPanel" style="box-shadow: 2px 2px 3px #888888;">
+	<div class="instructions1">
+		Step 1: Select your school <select><option value="wm">The College of William and Mary</option></select><br><br>
+		Step 2: Enter your desired course number: <br>
+		<form action="list_classes.php" method="POST">
+			<text style="font-size: 48px; color: #34a0b8">CRN: </text><input type="text" name="CRN" size="6" class="mainCRN" placeholder="#####"><br>
+			<input type="submit" value="submit" class="homePageSubmit" onclick="popup('popUpDiv')">
+		</form>
+	</div>
+</div>
+
+
+<div id="blanket" style="display:none;"></div>
+<div id="popUpDiv" style="display:none;">
+	<a href="#" onclick="popup('popUpDiv')" style="position: absolute; right: 1%;"></a>
+	<div style="position: absolute; top: 40%; left: 40%">
+		<img src="css/loading.gif">
+	</div>
+</div>
+
+<div style="position: absolute; bottom: 10px; left: 0px; width: 99%; text-align:center; font-size: 14px; color: #26393d;">
+	<a href="technical.html">Technical</a>
+</div>
+
+</html>
